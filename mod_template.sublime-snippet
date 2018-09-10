@@ -1,0 +1,35 @@
+<snippet>
+    <content><![CDATA[
+
+long long add(long long a, long long b){
+    return (a + b) % MOD;
+}
+
+long long mul(long long a, long long b){
+    return (a * b) % MOD;
+}
+
+long long sub(long long a, long long b){
+    return (a - b + MOD) % MOD;
+}
+
+long long power(long long a, long long n){
+    if(n == 0) return 1;
+    if(n == 1) return a;
+    long long temp = power(a, n / 2);
+    (temp *= temp) %= MOD;
+    if(n & 1) (temp *= a) %= MOD;
+    return temp;
+}
+
+long long inv(long long a){
+    return power(a, MOD - 2);
+}
+${1}
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>modtemp</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++, source.cc</scope>
+</snippet>

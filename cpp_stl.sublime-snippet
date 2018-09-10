@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+#include <bits/stdc++.h>
+using namespace std;
+
+#define PI 3.141592653589793238462643383279
+typedef long long ll;
+const long double EPS = 1e-9;
+const ll MOD = 1e9+7;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+    cout << setprecision(20);
+	#ifdef LOCAL_TEST
+	freopen("input.txt","r",stdin);
+	#endif
+	${1}
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stltemp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++, source.cc</scope>
+</snippet>
