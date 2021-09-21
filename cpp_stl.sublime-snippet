@@ -11,8 +11,8 @@ const ll MOD = 1e9+7;
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
-        cout << fixed << setprecision(20);
-        mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+	cout << fixed << setprecision(20);
+	mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 	#ifdef LOCAL_TEST
 	freopen("input.txt","r",stdin);
 	#endif
