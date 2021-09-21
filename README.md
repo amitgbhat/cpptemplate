@@ -42,3 +42,24 @@ $ls /opt/homebrew/Cellar/gcc/11.2.0/bin
 ```
 /Users/<username>/Library/Application Support/Sublime Text 3/Packages/C++/C++ Single File.sublime-build
 ```
+	
+# Steps to fix indentation issue for single line for loop
+
+* Install resource viewer from [here](https://packagecontrol.io/packages/PackageResourceViewer)
+* Open `Indentaion Rules.tmPreferences` file using `PackageResourceViewer` -> `Open Resource` -> `C++`
+* Replace below:
+```
+	<key>bracketIndentNextLinePattern</key>
+	<string>(?x)
+	^ \s* \b(if|while|else)\b [^;]* $
+	| ^ \s* \b(for)\b .* $
+	</string>
+```
+* With:
+```
+	<key>bracketIndentNextLinePattern</key>
+	<string>(?x)
+	^ \s* \b(if|while|else)\b [^;]* $
+	| ^ \s* \b(for)\b [^\)]*\) [^{;]* $
+	</string>
+```
