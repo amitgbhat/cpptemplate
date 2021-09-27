@@ -1,6 +1,6 @@
 # Steps to install GNU GCC on Mac
 
-* If multiuser mac:
+* If multiuser mac ([reference](https://docs.brew.sh/Installation#untar-anywhere)):
   * Run this command to install separate homebrew in home dir: `mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew`
   * Set homebrew from new installation in `PATH` var: `export PATH=$HOME/homebrew/bin:$PATH >> ~/.zshrc # or ~/.bashrc`
 * Install `brew` tool from [here](https://brew.sh)
