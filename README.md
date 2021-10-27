@@ -67,3 +67,13 @@ $ls /opt/homebrew/Cellar/gcc/11.2.0/bin
 	| ^ \s* \b(for)\b [^\)]*\) [^{;]* $
 	</string>
 ```
+	
+# Steps to set `subl` in PATH
+* Open Applications dir, right click on Sublime text and choose: `Copy "Sublime Text" as Pathname". Example path: `/Applications/Sublime Text.app`
+* In Terminal, do the following: `ls -R /Applications/Sublime\ Text.app` (remember to escape the whitespace.
+* There should be one dir with `bin`:
+```
+/Applications/Sublime Text.app/Contents/SharedSupport/bin:
+subl
+```
+* Add this line to ~/.zprofile: `export PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin`
