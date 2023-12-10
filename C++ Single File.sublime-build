@@ -1,5 +1,5 @@
 {
-	"shell_cmd": "g++ -std=gnu++14  \"${file}\" -D LOCAL_TEST -o \"${file_path}/bin_${file_base_name}.out\" ",
+	"shell_cmd": "/opt/homebrew/bin/g++-13 -std=gnu++14  \"${file}\" -D LOCAL_TEST -o \"${file_path}/bin_${file_base_name}.out\" ",
 	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
 	"working_dir": "${file_path}",
 	"selector": "source.c, source.c++, source.cpp, source.cc",
@@ -8,7 +8,7 @@
 	[
 		{
 			"name": "Run",
-			"shell_cmd": "g++ -std=gnu++14  \"${file}\" -D LOCAL_TEST -o \"${file_path}/bin_${file_base_name}.out\" && \"${file_path}/bin_${file_base_name}.out\""
+			"shell_cmd": "/opt/homebrew/bin/g++-13 -std=gnu++14  \"${file}\" -D LOCAL_TEST -o \"${file_path}/bin_${file_base_name}.out\" && \"${file_path}/bin_${file_base_name}.out\""
 		}
 	]
 }
